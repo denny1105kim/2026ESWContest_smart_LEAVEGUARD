@@ -1,0 +1,9 @@
+{
+  "id": "com.atlas.app.powernode",
+  "type": "native",
+  "display_type": "headless",
+  "name": "powernode",
+  "description": "LeaveGuard power node: Shelly plug current to appliance state over MQTT",
+  "entry": "com.atlas.app.powernode",
+  "version": "0.0.1"
+}

@@ -1,0 +1,11 @@
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+.idea/
+.vscode/
+door-node/esp32cam/secrets.h

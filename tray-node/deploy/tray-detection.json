@@ -1,0 +1,85 @@
+{
+  "device_id": "tray01",
+  "encoder": {
+    "preset": "orbit_protonets_effb0_224",
+    "model": "/opt/leaveguard/models/orbit_protonets_effb0_224.onnx"
+  },
+  "roi_version": "black-board-oblique-20261024e",
+  "out_dir": "/var/lib/leaveguard-tray-detection",
+  "save_dir": "/var/lib/leaveguard-tray-detection/samples",
+  "save_max": 4000,
+  "settle_frames": 4,
+  "refresh_sec": 2,
+  "max_candidates": 10,
+  "camera": {
+    "width": 1536,
+    "height": 864,
+    "fps": 10,
+    "args": [
+      "--mode",
+      "2304:1296:10:P",
+      "--autofocus-mode",
+      "manual",
+      "--lens-position",
+      "1.5",
+      "--shutter",
+      "55000",
+      "--gain",
+      "2.0",
+      "--awbgains",
+      "2.11,1.92",
+      "--hdr",
+      "sensor"
+    ]
+  },
+  "http": {
+    "bind": "0.0.0.0",
+    "port": 8080
+  },
+  "mqtt": {
+    "host": "192.168.0.50",
+    "port": 1883,
+    "health_sec": 5
+  },
+  "roi": [
+    0,
+    0,
+    1456,
+    863
+  ],
+  "panel": {
+    "edge": 0
+  },
+  "detector": {
+    "model": "/opt/leaveguard/models/yolox_tray_items_new9_512.onnx",
+    "input": 512,
+    "score": 0.6,
+    "nms": 0.5
+  },
+  "roi_polygon": [
+    [
+      1456,
+      863
+    ],
+    [
+      0,
+      863
+    ],
+    [
+      0,
+      448
+    ],
+    [
+      229,
+      0
+    ],
+    [
+      985,
+      0
+    ]
+  ],
+  "encoder2": {
+    "preset": "dinov2_vits14_reg_168",
+    "model": "/opt/leaveguard/models/dinov2_vits14_reg_168.onnx"
+  }
+}

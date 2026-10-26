@@ -1,0 +1,16 @@
+[Unit]
+Description=LeaveGuard tray detection node
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=leaveguard
+SupplementaryGroups=video render
+ExecStart=/opt/leaveguard/tray-detection/tray-detection --config /etc/leaveguard/tray-detection.json
+Restart=always
+RestartSec=5
+StateDirectory=leaveguard-tray-detection
+Nice=5
+
+[Install]
+WantedBy=multi-user.target

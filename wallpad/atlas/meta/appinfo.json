@@ -1,0 +1,21 @@
+{
+    "id": "com.atlas.app.leaveguard_main",
+    "type": "flutter",
+    "name": "leaveguard_main",
+    "description": "LeaveGuard wallpad application",
+    "entry": "leaveguard_main --bundle=./ --fullscreen -a com.atlas.app.leaveguard_main",
+    "version": "1.0.0",
+    "required_permissions": {
+        "privileged": [
+            "com.atlas.permission.privileged.permission_agent",
+            "com.atlas.permission.privileged.network_manage",
+            "com.atlas.permission.privileged.peripheral"
+        ],
+        "user_consent": [
+            "com.atlas.permission.user_consent.cameradevice",
+            "com.atlas.permission.user_consent.camerastream",
+            "com.atlas.permission.user_consent.cameradescriptor",
+            "com.atlas.permission.user_consent.cameracontrol"
+        ]
+    }
+}
